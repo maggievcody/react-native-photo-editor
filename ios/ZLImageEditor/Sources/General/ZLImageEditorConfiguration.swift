@@ -43,7 +43,7 @@ public class ZLImageEditorConfiguration: NSObject {
         }
     }
     
-    private var pri_editImageTools: [ZLImageEditorConfiguration.EditImageTool] = [.draw, .clip, .imageSticker, .textSticker, .mosaic, .filter]
+    private var pri_editImageTools: [ZLImageEditorConfiguration.EditImageTool] = [.draw, .textSticker, .imageSticker, .clip, /*.mosaic, .filter*/]
     /// Edit image tools. (Default order is draw, clip, imageSticker, textSticker, mosaic, filtter)
     /// Because Objective-C Array can't contain Enum styles, so this property is not available in Objective-C.
     /// - warning: If you want to use the image sticker feature, you must provide a view that implements ZLImageStickerContainerDelegate.
@@ -53,14 +53,14 @@ public class ZLImageEditorConfiguration: NSObject {
         }
         get {
             if pri_editImageTools.isEmpty {
-                return [.draw, .clip, .imageSticker, .textSticker, .mosaic, .filter]
+                return [.draw, .textSticker, .imageSticker, .clip, /*.mosaic, .filter*/]
             } else {
                 return pri_editImageTools
             }
         }
     }
     
-    private var pri_editImageDrawColors: [UIColor] = [.white, .black, zlRGB(241, 79, 79), zlRGB(243, 170, 78), zlRGB(80, 169, 56), zlRGB(30, 183, 243), zlRGB(139, 105, 234)]
+    private var pri_editImageDrawColors: [UIColor] = [.white, zlRGB(252, 202, 101), zlRGB(249, 132, 69), zlRGB(255, 77, 77), zlRGB(110, 48, 229), zlRGB(28, 72, 242), zlRGB(0, 138, 252), zlRGB(13, 202, 211), zlRGB(39, 226, 164), .black]
     /// Draw colors for image editor.
     @objc public var editImageDrawColors: [UIColor] {
         set {
@@ -68,7 +68,7 @@ public class ZLImageEditorConfiguration: NSObject {
         }
         get {
             if pri_editImageDrawColors.isEmpty {
-                return [.white, .black, zlRGB(241, 79, 79), zlRGB(243, 170, 78), zlRGB(80, 169, 56), zlRGB(30, 183, 243), zlRGB(139, 105, 234)]
+                return [.white, zlRGB(252, 202, 101), zlRGB(249, 132, 69), zlRGB(255, 77, 77), zlRGB(110, 48, 229), zlRGB(28, 72, 242), zlRGB(0, 138, 252), zlRGB(13, 202, 211), zlRGB(39, 226, 164), .black]
             } else {
                 return pri_editImageDrawColors
             }
@@ -134,7 +134,7 @@ public class ZLImageEditorConfiguration: NSObject {
     /// The background color of edit done button.
     @objc public var editDoneBtnBgColor: UIColor = zlRGB(80, 169, 56)
     
-    @objc public var editDoneTitleColor: UIColor = .black
+    @objc public var editDoneTitleColor: UIColor = .white
 }
 
 
