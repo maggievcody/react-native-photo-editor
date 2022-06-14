@@ -93,7 +93,7 @@ public class ZLImageEditorConfiguration: NSObject {
         }
     }
     
-    private var pri_textStickerTextColors: [UIColor] = [.white, .black, zlRGB(241, 79, 79), zlRGB(243, 170, 78), zlRGB(80, 169, 56), zlRGB(30, 183, 243), zlRGB(139, 105, 234)]
+    private var pri_textStickerTextColors: [UIColor] = [.white, zlRGB(252, 202, 101), zlRGB(249, 132, 69), zlRGB(255, 77, 77), zlRGB(110, 48, 229), zlRGB(28, 72, 242), zlRGB(0, 138, 252), zlRGB(13, 202, 211), zlRGB(39, 226, 164), .black]
     /// Text sticker colors for image editor.
     @objc public var textStickerTextColors: [UIColor] {
         set {
@@ -101,7 +101,7 @@ public class ZLImageEditorConfiguration: NSObject {
         }
         get {
             if pri_textStickerTextColors.isEmpty {
-                return [.white, .black, zlRGB(241, 79, 79), zlRGB(243, 170, 78), zlRGB(80, 169, 56), zlRGB(30, 183, 243), zlRGB(139, 105, 234)]
+                return [.white, zlRGB(252, 202, 101), zlRGB(249, 132, 69), zlRGB(255, 77, 77), zlRGB(110, 48, 229), zlRGB(28, 72, 242), zlRGB(0, 138, 252), zlRGB(13, 202, 211), zlRGB(39, 226, 164), .black]
             } else {
                 return pri_textStickerTextColors
             }
