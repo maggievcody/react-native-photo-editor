@@ -705,9 +705,6 @@ public class ZLEditImageViewController: UIViewController {
             }
         }
         self.editFinishBlock?(resImage, editModel)
-
-        // TODO: call our save function here
-        // self.onSave() || options["onSave"] ?
         
         self.dismiss(animated: self.animateDismiss, completion: nil)
     }
