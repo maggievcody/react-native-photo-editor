@@ -279,7 +279,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = MH67NQJ66H;
+						DevelopmentTeam = 59DT9KZ27R;
 						LastSwiftMigration = 1250;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -572,7 +572,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MH67NQJ66H;
+				DEVELOPMENT_TEAM = 59DT9KZ27R;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -586,9 +586,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativephotoeditor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativephotoeditor2828;
 				PRODUCT_NAME = PhotoEditorExample;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/donquijote/project/react-native-photo-editor/example/ios/PhotoEditorExample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "./PhotoEditorExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -602,7 +602,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MH67NQJ66H;
+				DEVELOPMENT_TEAM = 59DT9KZ27R;
 				INFOPLIST_FILE = PhotoEditorExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -611,7 +611,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativephotoeditor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.reactnativephotoeditor2828;
 				PRODUCT_NAME = PhotoEditorExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/donquijote/project/react-native-photo-editor/example/ios/PhotoEditorExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
