@@ -78,10 +78,10 @@ class PhotoEditor: NSObject, ZLEditImageControllerDelegate {
             ZLEditImageViewController.showEditImageVC(parentVC:controller , image: image, delegate: self) { [weak self] (resImage, editModel) in
                 let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
                 
-                let destinationPath = URL(fileURLWithPath: documentsPath).appendingPathComponent(String(Int64(Date().timeIntervalSince1970 * 1000)) + ".png")
+                let destinationPath = URL(fileURLWithPath: documentsPath).appendingPathComponent(String(Int64(Date().timeIntervalSince1970 * 1000)) + ".jpeg")
                 
                 do {
-                    try resImage.pngData()?.write(to: destinationPath)
+                    try resImage.jpegData(compressionQuality: 1.0)?.write(to: destinationPath)
                     self?.resolve(destinationPath.absoluteString)
                 } catch {
                     debugPrint("writing file error", error)
