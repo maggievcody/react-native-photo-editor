@@ -79,10 +79,10 @@ class PhotoEditor: NSObject, ZLEditImageControllerDelegate {
             ZLEditImageViewController.showEditImageVC(parentVC:controller , image: image, delegate: self) { [weak self] (resImage, editModel) in
                 let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
                 
-                let destinationPath = URL(fileURLWithPath: documentsPath).appendingPathComponent(String(Int64(Date().timeIntervalSince1970 * 1000)) + ".png")
+                let destinationPath = URL(fileURLWithPath: documentsPath).appendingPathComponent(String(Int64(Date().timeIntervalSince1970 * 1000)) + ".jpeg")
                 
                 do {
-                    try resImage.pngData()?.write(to: destinationPath)
+                    try resImage.jpegData(compressionQuality: 1.0)?.write(to: destinationPath)
                     self?.resolve(destinationPath.absoluteString)
                 } catch {
                     debugPrint("writing file error", error)
@@ -94,19 +94,34 @@ class PhotoEditor: NSObject, ZLEditImageControllerDelegate {
     
     private func getUIImage (url: String ,completion:@escaping (UIImage) -> (), reject:@escaping(String)->()){
         if let path = URL(string: url) {
-            SDWebImageManager.shared.loadImage(with: path, options: .continueInBackground, progress: { (recieved, expected, nil) in
-            }, completed: { (downloadedImage, data, error, SDImageCacheType, true, imageUrlString) in
-                DispatchQueue.main.async {
-                    if(error != nil){
-                        print("error", error as Any)
-                        reject("false")
-                        return;
+            if(path.isFileURL) {
+                print("Loading local path")
+                do {
+                    let imageData = try Data(contentsOf: path)
+                    let uiImage = UIImage(data: imageData)
+                    if(uiImage != nil) {
+                        completion(uiImage!)
                     }
-                    if downloadedImage != nil{
-                        completion(downloadedImage!)
-                    }
+                } catch {
+                    print("Error loading image : \(error)")
+                    reject("false")
                 }
-            })
+            } else {
+                print("Downloading remote image")
+                SDWebImageManager.shared.loadImage(with: path, options: .continueInBackground, progress: { (recieved, expected, nil) in
+                }, completed: { (downloadedImage, data, error, SDImageCacheType, true, imageUrlString) in
+                    DispatchQueue.main.async {
+                        if(error != nil){
+                            print("error", error as Any)
+                            reject("false")
+                            return;
+                        }
+                        if downloadedImage != nil{
+                            completion(downloadedImage!)
+                        }
+                    }
+                })
+            }
         }else{
             reject("false")
         }
