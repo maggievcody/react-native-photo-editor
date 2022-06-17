@@ -45,8 +45,7 @@ class PhotoEditor: NSObject, ZLEditImageControllerDelegate {
     }
     
     func onCancel() {
-        //self.reject("USER_CANCELLED", "User has cancelled", nil)
-        return;
+        self.reject("USER_CANCELLED", "User has cancelled", nil)
     }
     
     private func setConfiguration(options: NSDictionary, resolve:@escaping RCTPromiseResolveBlock,reject:@escaping RCTPromiseRejectBlock) -> Void{
