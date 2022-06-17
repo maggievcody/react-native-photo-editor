@@ -1057,7 +1057,7 @@ class ZLImageClipRatioCell: UICollectionViewCell {
         self.contentView.addSubview(self.imageView)
         
         self.titleLabel = UILabel(frame: CGRect(x: 0, y: self.bounds.height-15, width: self.bounds.width, height: 12))
-        self.titleLabel.font = UIFont(name: "Poppins-Regular", ofSize: 12)
+        self.titleLabel.font = UIFont(name: "Poppins-Regular", size: 12)
         self.titleLabel.textColor = .white
         self.titleLabel.textAlignment = .center
         self.titleLabel.layer.shadowColor = UIColor.black.withAlphaComponent(0.3).cgColor

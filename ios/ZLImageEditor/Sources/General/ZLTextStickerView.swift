@@ -132,7 +132,7 @@ class ZLTextStickerView: UIView, ZLStickerViewAdditional {
         
         self.label = UILabel()
         self.label.text = text
-        self.label.font = UIFont(name: "Poppins-Semibold", ofSize: ZLTextStickerView.fontSize)
+        self.label.font = UIFont(name: "Poppins-Semibold", size: ZLTextStickerView.fontSize)
         self.label.textColor = textColor
         self.label.backgroundColor = bgColor
         self.label.numberOfLines = 0
@@ -414,7 +414,7 @@ class ZLTextStickerView: UIView, ZLStickerViewAdditional {
     
     class func calculateSize(text: String, width: CGFloat) -> CGSize {
         let diff = ZLTextStickerView.edgeInset * 2
-        let size = text.boundingRect(font: UIFont(name: "Poppins-Semibold", ofSize: ZLTextStickerView.fontSize), limitSize: CGSize(width: width - diff, height: CGFloat.greatestFiniteMagnitude))
+        let size = text.boundingRect(font: UIFont.boldSystemFont(ofSize: ZLTextStickerView.fontSize), limitSize: CGSize(width: width - diff, height: CGFloat.greatestFiniteMagnitude))
         return CGSize(width: size.width + diff * 2, height: size.height + diff * 2)
     }
     
