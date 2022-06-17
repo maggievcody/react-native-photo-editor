@@ -449,7 +449,7 @@ public class ZLEditImageViewController: UIViewController {
         ZLEditToolCell.zl_register(self.editToolCollectionView)
         
         self.doneBtn = UIButton(type: .custom)
-        self.doneBtn.titleLabel?.font = ZLImageEditorLayout.bottomToolTitleFont
+        self.doneBtn.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 17)
         self.doneBtn.backgroundColor = ZLImageEditorConfiguration.default().editDoneBtnBgColor
         self.doneBtn.setTitleColor(ZLImageEditorConfiguration.default().editDoneTitleColor, for: .normal)
         self.doneBtn.setTitle(localLanguageTextValue(.editFinish), for: .normal)
