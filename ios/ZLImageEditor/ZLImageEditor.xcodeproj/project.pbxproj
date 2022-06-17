@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F8497CD285D2EA2009AAC20 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F8497CA285D2EA2009AAC20 /* Poppins-Regular.ttf */; };
+		6F8497CE285D2EA2009AAC20 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F8497CB285D2EA2009AAC20 /* Poppins-Medium.ttf */; };
+		6F8497CF285D2EA2009AAC20 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F8497CC285D2EA2009AAC20 /* Poppins-SemiBold.ttf */; };
 		E40208DC256B9BA60077F5DC /* ZLImageEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = E40208DA256B9BA60077F5DC /* ZLImageEditor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E40208EB256B9F9C0077F5DC /* ZLEditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40208E4256B9F9C0077F5DC /* ZLEditImageViewController.swift */; };
 		E40208EC256B9F9C0077F5DC /* ZLImageStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40208E5256B9F9C0077F5DC /* ZLImageStickerView.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F8497CA285D2EA2009AAC20 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		6F8497CB285D2EA2009AAC20 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		6F8497CC285D2EA2009AAC20 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		E40208D7256B9BA60077F5DC /* ZLImageEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLImageEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40208DA256B9BA60077F5DC /* ZLImageEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLImageEditor.h; sourceTree = "<group>"; };
 		E40208DB256B9BA60077F5DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,9 +69,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F8497D0285D2EA6009AAC20 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6F8497CB285D2EA2009AAC20 /* Poppins-Medium.ttf */,
+				6F8497CA285D2EA2009AAC20 /* Poppins-Regular.ttf */,
+				6F8497CC285D2EA2009AAC20 /* Poppins-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		E40208CD256B9BA60077F5DC = {
 			isa = PBXGroup;
 			children = (
+				6F8497D0285D2EA6009AAC20 /* fonts */,
 				E40208D9256B9BA60077F5DC /* Sources */,
 				E40208D8256B9BA60077F5DC /* Products */,
 			);
@@ -191,7 +208,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F8497CE285D2EA2009AAC20 /* Poppins-Medium.ttf in Resources */,
+				6F8497CF285D2EA2009AAC20 /* Poppins-SemiBold.ttf in Resources */,
 				E4020905256BA0390077F5DC /* ZLImageEditor.bundle in Resources */,
+				6F8497CD285D2EA2009AAC20 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

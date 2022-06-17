@@ -24,9 +24,6 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libPhotoEditor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPhotoEditor.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F969CC3285D260200FB0713 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		6F969CC4285D260200FB0713 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		6F969CC5285D27FD00FB0713 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* PhotoEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoEditor.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* PhotoEditor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoEditor-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* PhotoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditor.swift; sourceTree = "<group>"; };
@@ -61,23 +58,12 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				6F969CC2285D25A400FB0713 /* fonts */,
 				0E9EC48C26B7EC9A0054EA0F /* Bundle */,
 				F4FF95D6245B92E800C19C63 /* PhotoEditor.swift */,
 				B3E7B5891CC2AC0600A0062D /* PhotoEditor.m */,
 				F4FF95D5245B92E700C19C63 /* PhotoEditor-Bridging-Header.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		6F969CC2285D25A400FB0713 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				6F969CC4285D260200FB0713 /* Poppins-Medium.ttf */,
-				6F969CC3285D260200FB0713 /* Poppins-Regular.ttf */,
-				6F969CC5285D27FD00FB0713 /* Poppins-SemiBold.ttf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
