@@ -82,7 +82,6 @@
 		E40208CD256B9BA60077F5DC = {
 			isa = PBXGroup;
 			children = (
-				6F8497D0285D2EA6009AAC20 /* fonts */,
 				E40208D9256B9BA60077F5DC /* Sources */,
 				E40208D8256B9BA60077F5DC /* Products */,
 			);
@@ -99,6 +98,7 @@
 		E40208D9256B9BA60077F5DC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				6F8497D0285D2EA6009AAC20 /* fonts */,
 				E40208DA256B9BA60077F5DC /* ZLImageEditor.h */,
 				E4020904256BA0390077F5DC /* ZLImageEditor.bundle */,
 				E4020902256BA00D0077F5DC /* General */,
