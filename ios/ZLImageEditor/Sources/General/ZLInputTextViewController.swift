@@ -124,13 +124,13 @@ class ZLInputTextViewController: UIViewController {
         
         self.cancelBtn = UIButton(type: .custom)
         self.cancelBtn.setTitle(localLanguageTextValue(.cancel), for: .normal)
-        self.cancelBtn.titleLabel?.font = UIFont(name: "Poppins-Semibold", size: 14)
+        self.cancelBtn.titleLabel?.font = UIFont(name: "Poppins-Semibold", size: 16)
         self.cancelBtn.addTarget(self, action: #selector(cancelBtnClick), for: .touchUpInside)
         view.addSubview(self.cancelBtn)
         
         self.doneBtn = UIButton(type: .custom)
         self.doneBtn.setTitle(localLanguageTextValue(.done), for: .normal)
-        self.doneBtn.titleLabel?.font = UIFont(name: "Poppins-Semibold", size: 14)
+        self.doneBtn.titleLabel?.font = UIFont(name: "Poppins-Semibold", size: 16)
         self.doneBtn.addTarget(self, action: #selector(doneBtnClick), for: .touchUpInside)
         view.addSubview(self.doneBtn)
         
