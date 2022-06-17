@@ -142,7 +142,7 @@ class ZLInputTextViewController: UIViewController {
         self.textView.tintColor = ZLImageEditorConfiguration.default().editDoneBtnBgColor
         self.textView.textColor = self.currentTextColor
         self.textView.text = self.text
-        self.textView.font = UIFont.boldSystemFont(ofSize: ZLTextStickerView.fontSize)
+        self.textView.font = UIFont(name: "Poppins-Semibold", ofSize: ZLTextStickerView.fontSize)
         view.addSubview(self.textView)
         
         let layout = UICollectionViewFlowLayout()
