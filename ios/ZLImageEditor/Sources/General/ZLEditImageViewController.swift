@@ -458,8 +458,6 @@ public class ZLEditImageViewController: UIViewController {
         self.doneBtn.layer.cornerRadius = ZLImageEditorLayout.bottomToolBtnCornerRadius
         self.bottomShadowView.addSubview(self.doneBtn)
         
-        self.doneBtn.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
-        
         let drawColorLayout = UICollectionViewFlowLayout()
         drawColorLayout.itemSize = CGSize(width: 30, height: 30)
         drawColorLayout.minimumLineSpacing = 15
@@ -517,7 +515,6 @@ public class ZLEditImageViewController: UIViewController {
         asbinTipLabel.textAlignment = .center
         asbinTipLabel.textColor = .white
         asbinTipLabel.text = localLanguageTextValue(.textStickerRemoveTips)
-        asbinTipLabel.font = .systemFont(ofSize: 12, weight: .bold)
         asbinTipLabel.numberOfLines = 2
         asbinTipLabel.lineBreakMode = .byCharWrapping
         self.ashbinView.addSubview(asbinTipLabel)
