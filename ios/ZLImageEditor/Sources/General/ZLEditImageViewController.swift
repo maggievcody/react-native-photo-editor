@@ -449,7 +449,7 @@ public class ZLEditImageViewController: UIViewController {
         ZLEditToolCell.zl_register(self.editToolCollectionView)
         
         self.doneBtn = UIButton(type: .custom)
-        self.doneBtn.titleLabel?.font = ZLImageEditorLayout.bottomToolTitleFont
+        self.doneBtn.titleLabel?.font = UIFont(name: "Poppins-Semibold", size: 14)
         self.doneBtn.backgroundColor = ZLImageEditorConfiguration.default().editDoneBtnBgColor
         self.doneBtn.setTitleColor(ZLImageEditorConfiguration.default().editDoneTitleColor, for: .normal)
         self.doneBtn.setTitle(localLanguageTextValue(.editFinish), for: .normal)
@@ -457,8 +457,6 @@ public class ZLEditImageViewController: UIViewController {
         self.doneBtn.layer.masksToBounds = true
         self.doneBtn.layer.cornerRadius = ZLImageEditorLayout.bottomToolBtnCornerRadius
         self.bottomShadowView.addSubview(self.doneBtn)
-        
-        self.doneBtn.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
         
         let drawColorLayout = UICollectionViewFlowLayout()
         drawColorLayout.itemSize = CGSize(width: 30, height: 30)
@@ -513,11 +511,10 @@ public class ZLEditImageViewController: UIViewController {
         self.ashbinView.addSubview(self.ashbinImgView)
         
         let asbinTipLabel = UILabel(frame: CGRect(x: 0, y: ashbinSize.height-34, width: ashbinSize.width, height: 34))
-        asbinTipLabel.font = UIFont.systemFont(ofSize: 12)
+        asbinTipLabel.font = UIFont(name: "Poppins-Regular", size: 12)
         asbinTipLabel.textAlignment = .center
         asbinTipLabel.textColor = .white
         asbinTipLabel.text = localLanguageTextValue(.textStickerRemoveTips)
-        asbinTipLabel.font = .systemFont(ofSize: 12, weight: .bold)
         asbinTipLabel.numberOfLines = 2
         asbinTipLabel.lineBreakMode = .byCharWrapping
         self.ashbinView.addSubview(asbinTipLabel)
@@ -1135,12 +1132,12 @@ extension ZLEditImageViewController: UICollectionViewDataSource, UICollectionVie
             if self.currentFilter === filter {
                 cell.nameLabel.backgroundColor = ZLImageEditorConfiguration.default().editDoneBtnBgColor
                 
-                cell.nameLabel.font = UIFont.systemFont(ofSize: 11, weight: .semibold)
+                cell.nameLabel.font = UIFont(name: "Poppins-Semibold", size: 11)
                 cell.nameLabel.textColor = ZLImageEditorConfiguration.default().editDoneTitleColor
                 
             } else {
                 cell.nameLabel.backgroundColor = UIColor(white: 12, alpha: 0.8)
-                cell.nameLabel.font = UIFont.systemFont(ofSize: 11)
+                cell.nameLabel.font = UIFont(name: "Poppins-Regular", size: 11)
                 cell.nameLabel.textColor = .darkGray
             }
             
@@ -1392,7 +1389,7 @@ class ZLFilterImageCell: UICollectionViewCell {
         
         self.nameLabel = UILabel(frame: CGRect(x: 0, y: self.bounds.width - 20, width: self.bounds.width, height: 20))
 
-        self.nameLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        self.nameLabel.font = UIFont(name: "Poppins-Semibold", size: 12)
         self.nameLabel.textAlignment = .center
         self.nameLabel.textColor = .black
         self.nameLabel.adjustsFontSizeToFitWidth = true
