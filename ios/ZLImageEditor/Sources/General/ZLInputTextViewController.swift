@@ -151,7 +151,7 @@ class ZLInputTextViewController: UIViewController {
         layout.minimumInteritemSpacing = 15
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
-        self.collectionView = UICollectionView(frame: CGRect(x: 0, y: self.view.frame.height - ZLInputTextViewController.collectionViewHeight, width: self.view.frame.width, height: ZLInputTextViewController.collectionViewHeight), collectionViewLayout: layout)
+        self.collectionView = UICollectionView(frame: CGRect(x: 0, y: self.view.frame.height - (ZLInputTextViewController.collectionViewHeight + 20), width: self.view.frame.width, height: ZLInputTextViewController.collectionViewHeight), collectionViewLayout: layout)
         self.collectionView.backgroundColor = .clear
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
