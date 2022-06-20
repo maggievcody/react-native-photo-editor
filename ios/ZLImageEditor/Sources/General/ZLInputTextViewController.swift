@@ -124,13 +124,13 @@ class ZLInputTextViewController: UIViewController {
         
         self.cancelBtn = UIButton(type: .custom)
         self.cancelBtn.setTitle(localLanguageTextValue(.cancel), for: .normal)
-        self.cancelBtn.titleLabel?.font = ZLImageEditorLayout.bottomToolTitleFont
+        self.cancelBtn.titleLabel?.font = UIFont(name: "Poppins-Semibold", size: 16)
         self.cancelBtn.addTarget(self, action: #selector(cancelBtnClick), for: .touchUpInside)
         view.addSubview(self.cancelBtn)
         
         self.doneBtn = UIButton(type: .custom)
         self.doneBtn.setTitle(localLanguageTextValue(.done), for: .normal)
-        self.doneBtn.titleLabel?.font = ZLImageEditorLayout.bottomToolTitleFont
+        self.doneBtn.titleLabel?.font = UIFont(name: "Poppins-Semibold", size: 16)
         self.doneBtn.addTarget(self, action: #selector(doneBtnClick), for: .touchUpInside)
         view.addSubview(self.doneBtn)
         
@@ -142,7 +142,7 @@ class ZLInputTextViewController: UIViewController {
         self.textView.tintColor = ZLImageEditorConfiguration.default().editDoneBtnBgColor
         self.textView.textColor = self.currentTextColor
         self.textView.text = self.text
-        self.textView.font = UIFont.boldSystemFont(ofSize: ZLTextStickerView.fontSize)
+        self.textView.font = UIFont(name: "Poppins-Semibold", size: ZLTextStickerView.fontSize)
         view.addSubview(self.textView)
         
         let layout = UICollectionViewFlowLayout()

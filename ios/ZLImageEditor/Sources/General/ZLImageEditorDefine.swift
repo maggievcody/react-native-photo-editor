@@ -34,7 +34,7 @@ struct ZLImageEditorLayout {
     
     static let bottomToolTitleFont = UIFont.systemFont(ofSize: 17)
     
-    static let bottomToolBtnCornerRadius: CGFloat = 5
+    static let bottomToolBtnCornerRadius: CGFloat = 7
     
 }
 
