@@ -511,7 +511,7 @@ public class ZLEditImageViewController: UIViewController {
         self.ashbinView.addSubview(self.ashbinImgView)
         
         let asbinTipLabel = UILabel(frame: CGRect(x: 0, y: ashbinSize.height-39, width: ashbinSize.width, height: 34))
-        asbinTipLabel.font = UIFont(name: "Poppins-Semibold", size: 10)
+        asbinTipLabel.font = UIFont(name: "Poppins-Semibold", size: 14)
         asbinTipLabel.textAlignment = .center
         asbinTipLabel.textColor = .white
         asbinTipLabel.text = localLanguageTextValue(.textStickerRemoveTips)
