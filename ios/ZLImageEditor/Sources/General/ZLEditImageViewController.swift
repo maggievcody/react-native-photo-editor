@@ -72,7 +72,7 @@ public class ZLEditImageViewController: UIViewController {
     
     static let maxDrawLineImageWidth: CGFloat = 600
     
-    static let ashbinNormalBgColor = zlRGB(40, 40, 40).withAlphaComponent(0.8)
+    static let ashbinNormalBgColor = zlRGB(46, 49, 52)
     
     static var delegate: ZLEditImageControllerDelegate? = nil
     
@@ -507,11 +507,11 @@ public class ZLEditImageViewController: UIViewController {
         self.view.addSubview(self.ashbinView)
         
         self.ashbinImgView = UIImageView(image: getImage("zl_ashbin"), highlightedImage: getImage("zl_ashbin_open"))
-        self.ashbinImgView.frame = CGRect(x: (ashbinSize.width-25)/2, y: 15, width: 25, height: 25)
+        self.ashbinImgView.frame = CGRect(x: (ashbinSize.width-25)/2, y: 14, width: 25, height: 25)
         self.ashbinView.addSubview(self.ashbinImgView)
         
-        let asbinTipLabel = UILabel(frame: CGRect(x: 0, y: ashbinSize.height-34, width: ashbinSize.width, height: 34))
-        asbinTipLabel.font = UIFont(name: "Poppins-Regular", size: 12)
+        let asbinTipLabel = UILabel(frame: CGRect(x: 0, y: ashbinSize.height-39, width: ashbinSize.width, height: 34))
+        asbinTipLabel.font = UIFont(name: "Poppins-Semibold", size: 10)
         asbinTipLabel.textAlignment = .center
         asbinTipLabel.textColor = .white
         asbinTipLabel.text = localLanguageTextValue(.textStickerRemoveTips)
