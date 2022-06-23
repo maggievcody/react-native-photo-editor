@@ -292,8 +292,8 @@ public class ZLEditImageViewController: UIViewController {
         self.bottomShadowView.frame = CGRect(x: 0, y: self.view.frame.height-140-insets.bottom, width: self.view.frame.width, height: 140+insets.bottom)
         self.bottomShadowLayer.frame = self.bottomShadowView.bounds
         
-        self.revokeBtn.frame = CGRect(x: 20, y: 30, width: 35, height: 30)
-        self.drawColorCollectionView.frame = CGRect(x: 70, y: 20, width: self.view.frame.width - 80, height: 50)
+        self.revokeBtn.frame = CGRect(x: 20, y: 30, width: 30, height: 30)
+        self.drawColorCollectionView.frame = CGRect(x: 65, y: 20, width: self.view.frame.width - 65, height: 50)
         
         self.filterCollectionView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: ZLEditImageViewController.filterColViewH)
         
