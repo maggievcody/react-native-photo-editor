@@ -285,7 +285,8 @@ public class ZLEditImageViewController: UIViewController {
         self.topShadowView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 150)
         
         self.topShadowLayer.frame = self.topShadowView.bounds
-        let iconSize = 32.0
+
+        let iconSize = UIDevice.current.localizedModel == "iPhone" ? 32.0 : 48.0
         self.cancelBtn.frame = CGRect(x: 20 , y: insets.top + 24, width: iconSize, height: iconSize)
         
         
