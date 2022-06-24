@@ -285,8 +285,8 @@ public class ZLEditImageViewController: UIViewController {
         self.topShadowView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 150)
         
         self.topShadowLayer.frame = self.topShadowView.bounds
-        let iconBackSize = 32.0
-        self.cancelBtn.frame = CGRect(x: 20 , y: insets.top + 24, width: iconBackSize, height: iconBackSize)
+        let iconSize = 32.0
+        self.cancelBtn.frame = CGRect(x: 20 , y: insets.top + 24, width: iconSize, height: iconSize)
         
         
         self.bottomShadowView.frame = CGRect(x: 0, y: self.view.frame.height-140-insets.bottom, width: self.view.frame.width, height: 140+insets.bottom)
@@ -301,11 +301,9 @@ public class ZLEditImageViewController: UIViewController {
         
         let toolY: CGFloat = 85
         
-        let doneBtnH = ZLImageEditorLayout.bottomToolBtnH
-        let doneBtnW = localLanguageTextValue(.editFinish).boundingRect(font: ZLImageEditorLayout.bottomToolTitleFont, limitSize: CGSize(width: CGFloat.greatestFiniteMagnitude, height: doneBtnH)).width + 20
-        self.doneBtn.frame = CGRect(x: self.view.frame.width-20-doneBtnW, y: toolY-2, width: doneBtnW, height: doneBtnH)
+        self.doneBtn.frame = CGRect(x: self.view.frame.width - (iconSize + 20), y: insets.top + 24, width: iconSize, height: iconSize)
         
-        self.editToolCollectionView.frame = CGRect(x: 20, y: toolY, width: self.view.bounds.width - 20 - 20 - doneBtnW - 20, height: 30)
+        self.editToolCollectionView.frame = CGRect(x: 20, y: toolY, width: self.view.bounds.width - (20 * 3), height: 30)
         
         if !self.drawPaths.isEmpty {
             self.drawLine()
@@ -449,14 +447,13 @@ public class ZLEditImageViewController: UIViewController {
         ZLEditToolCell.zl_register(self.editToolCollectionView)
         
         self.doneBtn = UIButton(type: .custom)
-        self.doneBtn.titleLabel?.font = UIFont(name: "Poppins-Semibold", size: 14)
-        self.doneBtn.backgroundColor = ZLImageEditorConfiguration.default().editDoneBtnBgColor
-        self.doneBtn.setTitleColor(ZLImageEditorConfiguration.default().editDoneTitleColor, for: .normal)
-        self.doneBtn.setTitle(localLanguageTextValue(.editFinish), for: .normal)
         self.doneBtn.addTarget(self, action: #selector(doneBtnClick), for: .touchUpInside)
-        self.doneBtn.layer.masksToBounds = true
-        self.doneBtn.layer.cornerRadius = ZLImageEditorLayout.bottomToolBtnCornerRadius
-        self.bottomShadowView.addSubview(self.doneBtn)
+        self.doneBtn = UIButton(type: .custom)
+        self.doneBtn.setImage(getImage("zl_save"), for: .normal)
+        self.doneBtn.addTarget(self, action: #selector(cancelBtnClick), for: .touchUpInside)
+        self.doneBtn.adjustsImageWhenHighlighted = false
+        self.doneBtn.zl_enlargeValidTouchArea(inset: 30)
+        self.topShadowView.addSubview(self.doneBtn)
         
         let drawColorLayout = UICollectionViewFlowLayout()
         drawColorLayout.itemSize = CGSize(width: 30, height: 30)
