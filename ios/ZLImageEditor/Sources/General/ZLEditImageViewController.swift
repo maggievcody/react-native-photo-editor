@@ -286,7 +286,7 @@ public class ZLEditImageViewController: UIViewController {
         
         self.topShadowLayer.frame = self.topShadowView.bounds
         let iconBackSize = 32.0
-        self.cancelBtn.frame = CGRect(x: self.containerView.bounds.width - iconBackSize - 20.0 , y: insets.top + 24, width: iconBackSize, height: iconBackSize)
+        self.cancelBtn.frame = CGRect(x: 20 , y: insets.top + 24, width: iconBackSize, height: iconBackSize)
         
         
         self.bottomShadowView.frame = CGRect(x: 0, y: self.view.frame.height-140-insets.bottom, width: self.view.frame.width, height: 140+insets.bottom)
