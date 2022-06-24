@@ -447,10 +447,9 @@ public class ZLEditImageViewController: UIViewController {
         ZLEditToolCell.zl_register(self.editToolCollectionView)
         
         self.doneBtn = UIButton(type: .custom)
-        self.doneBtn.addTarget(self, action: #selector(doneBtnClick), for: .touchUpInside)
         self.doneBtn = UIButton(type: .custom)
         self.doneBtn.setImage(getImage("zl_save"), for: .normal)
-        self.doneBtn.addTarget(self, action: #selector(cancelBtnClick), for: .touchUpInside)
+        self.doneBtn.addTarget(self, action: #selector(doneBtnClick), for: .touchUpInside)
         self.doneBtn.adjustsImageWhenHighlighted = false
         self.doneBtn.zl_enlargeValidTouchArea(inset: 30)
         self.topShadowView.addSubview(self.doneBtn)
