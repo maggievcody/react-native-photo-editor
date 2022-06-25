@@ -268,6 +268,7 @@ public class ZLEditImageViewController: UIViewController {
     }
     
     public override func viewDidLayoutSubviews() {
+        let isTablet = UIDevice.current.localizedModel == "iPhone";
         super.viewDidLayoutSubviews()
         guard self.shouldLayout else {
             return
@@ -286,8 +287,8 @@ public class ZLEditImageViewController: UIViewController {
         
         self.topShadowLayer.frame = self.topShadowView.bounds
 
-        let iconSize = UIDevice.current.localizedModel == "iPhone" ? 18.0 : 24.0
-        self.cancelBtn.frame = CGRect(x: 20 , y: insets.top + 24, width: iconSize, height: iconSize)
+        let iconSize = isTablet ? 20.0 : 16.0
+        self.cancelBtn.frame = CGRect(x: isTablet ? 30 : 20, y: insets.top + 8, width: iconSize, height: iconSize)
         
         
         self.bottomShadowView.frame = CGRect(x: 0, y: self.view.frame.height-140-insets.bottom, width: self.view.frame.width, height: 140+insets.bottom)
@@ -302,7 +303,7 @@ public class ZLEditImageViewController: UIViewController {
         
         let toolY: CGFloat = 85
         
-        self.doneBtn.frame = CGRect(x: self.view.frame.width - (iconSize + 20), y: insets.top + 24, width: iconSize, height: iconSize)
+        self.doneBtn.frame = CGRect(x: self.view.frame.width - (iconSize + (isTablet ? 30 : 20)), y: insets.top + 8, width: iconSize, height: iconSize)
         
         self.editToolCollectionView.frame = CGRect(x: 20, y: toolY, width: self.view.bounds.width - (20 * 3), height: 30)
         
