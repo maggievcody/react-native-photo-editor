@@ -286,7 +286,7 @@ public class ZLEditImageViewController: UIViewController {
         
         self.topShadowLayer.frame = self.topShadowView.bounds
 
-        let iconSize = UIDevice.current.localizedModel == "iPhone" ? 32.0 : 48.0
+        let iconSize = UIDevice.current.localizedModel == "iPhone" ? 18.0 : 24.0
         self.cancelBtn.frame = CGRect(x: 20 , y: insets.top + 24, width: iconSize, height: iconSize)
         
         
@@ -418,12 +418,20 @@ public class ZLEditImageViewController: UIViewController {
         self.topShadowView.layer.addSublayer(self.topShadowLayer)
         
         self.cancelBtn = UIButton(type: .custom)
-        self.cancelBtn.setImage(getImage("zl_retake"), for: .normal)
+        self.cancelBtn.setBackgroundImage(getImage("zl_retake"), for: .normal)
         self.cancelBtn.addTarget(self, action: #selector(cancelBtnClick), for: .touchUpInside)
         self.cancelBtn.adjustsImageWhenHighlighted = false
         self.cancelBtn.zl_enlargeValidTouchArea(inset: 30)
         
         self.topShadowView.addSubview(self.cancelBtn)
+        
+        self.doneBtn = UIButton(type: .custom)
+        self.doneBtn.setBackgroundImage(getImage("zl_save"), for: .normal)
+        self.doneBtn.addTarget(self, action: #selector(doneBtnClick), for: .touchUpInside)
+        self.doneBtn.adjustsImageWhenHighlighted = false
+        self.doneBtn.zl_enlargeValidTouchArea(inset: 30)
+        
+        self.topShadowView.addSubview(self.doneBtn)
         
         self.bottomShadowView = UIView()
         self.view.addSubview(self.bottomShadowView)
@@ -446,14 +454,6 @@ public class ZLEditImageViewController: UIViewController {
         self.bottomShadowView.addSubview(self.editToolCollectionView)
         
         ZLEditToolCell.zl_register(self.editToolCollectionView)
-        
-        self.doneBtn = UIButton(type: .custom)
-        self.doneBtn = UIButton(type: .custom)
-        self.doneBtn.setImage(getImage("zl_save"), for: .normal)
-        self.doneBtn.addTarget(self, action: #selector(doneBtnClick), for: .touchUpInside)
-        self.doneBtn.adjustsImageWhenHighlighted = false
-        self.doneBtn.zl_enlargeValidTouchArea(inset: 30)
-        self.topShadowView.addSubview(self.doneBtn)
         
         let drawColorLayout = UICollectionViewFlowLayout()
         drawColorLayout.itemSize = CGSize(width: 30, height: 30)
