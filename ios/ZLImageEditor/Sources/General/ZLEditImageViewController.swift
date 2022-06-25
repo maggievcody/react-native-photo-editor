@@ -268,7 +268,7 @@ public class ZLEditImageViewController: UIViewController {
     }
     
     public override func viewDidLayoutSubviews() {
-        let isTablet = UIDevice.current.localizedModel == "iPhone";
+        let isTablet = UIDevice.current.localizedModel != "iPhone";
         super.viewDidLayoutSubviews()
         guard self.shouldLayout else {
             return
