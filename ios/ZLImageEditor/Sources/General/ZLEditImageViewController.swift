@@ -288,7 +288,7 @@ public class ZLEditImageViewController: UIViewController {
         self.topShadowLayer.frame = self.topShadowView.bounds
 
         let iconSize = isTablet ? 20.0 : 16.0
-        self.cancelBtn.frame = CGRect(x: isTablet ? 30 : 20, y: insets.top + 8, width: iconSize, height: iconSize)
+        self.cancelBtn.frame = CGRect(x: isTablet ? 30 : 20, y: insets.top + 10, width: iconSize, height: iconSize)
         
         
         self.bottomShadowView.frame = CGRect(x: 0, y: self.view.frame.height-140-insets.bottom, width: self.view.frame.width, height: 140+insets.bottom)
@@ -303,7 +303,7 @@ public class ZLEditImageViewController: UIViewController {
         
         let toolY: CGFloat = 85
         
-        self.doneBtn.frame = CGRect(x: self.view.frame.width - (iconSize + (isTablet ? 30 : 20)), y: insets.top + 8, width: iconSize, height: iconSize)
+        self.doneBtn.frame = CGRect(x: self.view.frame.width - (iconSize + (isTablet ? 30 : 20)), y: insets.top + 10, width: iconSize, height: iconSize)
         
         self.editToolCollectionView.frame = CGRect(x: 20, y: toolY, width: self.view.bounds.width - (20 * 3), height: 30)
         
