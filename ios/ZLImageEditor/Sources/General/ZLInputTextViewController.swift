@@ -95,7 +95,7 @@ class ZLInputTextViewController: UIViewController {
             insets = self.view.safeAreaInsets
         }
         
-        let btnY = insets.top + 20
+        let btnY = insets.top + 8
         let cancelBtnW = localLanguageTextValue(.cancel).boundingRect(font: ZLImageEditorLayout.bottomToolTitleFont, limitSize: CGSize(width: .greatestFiniteMagnitude, height: ZLImageEditorLayout.bottomToolBtnH)).width + 20
         self.cancelBtn.frame = CGRect(x: 15, y: btnY, width: cancelBtnW, height: ZLImageEditorLayout.bottomToolBtnH)
         

@@ -268,6 +268,7 @@ public class ZLEditImageViewController: UIViewController {
     }
     
     public override func viewDidLayoutSubviews() {
+        let isTablet = UIDevice.current.localizedModel != "iPhone";
         super.viewDidLayoutSubviews()
         guard self.shouldLayout else {
             return
@@ -285,8 +286,9 @@ public class ZLEditImageViewController: UIViewController {
         self.topShadowView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 150)
         
         self.topShadowLayer.frame = self.topShadowView.bounds
-        let iconSize = 32.0
-        self.cancelBtn.frame = CGRect(x: 20 , y: insets.top + 24, width: iconSize, height: iconSize)
+
+        let iconSize = isTablet ? 20.0 : 16.0
+        self.cancelBtn.frame = CGRect(x: isTablet ? 30 : 20, y: insets.top + 10, width: iconSize, height: iconSize)
         
         
         self.bottomShadowView.frame = CGRect(x: 0, y: self.view.frame.height-140-insets.bottom, width: self.view.frame.width, height: 140+insets.bottom)
@@ -301,7 +303,7 @@ public class ZLEditImageViewController: UIViewController {
         
         let toolY: CGFloat = 85
         
-        self.doneBtn.frame = CGRect(x: self.view.frame.width - (iconSize + 20), y: insets.top + 24, width: iconSize, height: iconSize)
+        self.doneBtn.frame = CGRect(x: self.view.frame.width - (iconSize + (isTablet ? 30 : 20)), y: insets.top + 10, width: iconSize, height: iconSize)
         
         self.editToolCollectionView.frame = CGRect(x: 20, y: toolY, width: self.view.bounds.width - (20 * 3), height: 30)
         
@@ -417,12 +419,20 @@ public class ZLEditImageViewController: UIViewController {
         self.topShadowView.layer.addSublayer(self.topShadowLayer)
         
         self.cancelBtn = UIButton(type: .custom)
-        self.cancelBtn.setImage(getImage("zl_retake"), for: .normal)
+        self.cancelBtn.setBackgroundImage(getImage("zl_retake"), for: .normal)
         self.cancelBtn.addTarget(self, action: #selector(cancelBtnClick), for: .touchUpInside)
         self.cancelBtn.adjustsImageWhenHighlighted = false
         self.cancelBtn.zl_enlargeValidTouchArea(inset: 30)
         
         self.topShadowView.addSubview(self.cancelBtn)
+        
+        self.doneBtn = UIButton(type: .custom)
+        self.doneBtn.setBackgroundImage(getImage("zl_save"), for: .normal)
+        self.doneBtn.addTarget(self, action: #selector(doneBtnClick), for: .touchUpInside)
+        self.doneBtn.adjustsImageWhenHighlighted = false
+        self.doneBtn.zl_enlargeValidTouchArea(inset: 30)
+        
+        self.topShadowView.addSubview(self.doneBtn)
         
         self.bottomShadowView = UIView()
         self.view.addSubview(self.bottomShadowView)
@@ -445,14 +455,6 @@ public class ZLEditImageViewController: UIViewController {
         self.bottomShadowView.addSubview(self.editToolCollectionView)
         
         ZLEditToolCell.zl_register(self.editToolCollectionView)
-        
-        self.doneBtn = UIButton(type: .custom)
-        self.doneBtn = UIButton(type: .custom)
-        self.doneBtn.setImage(getImage("zl_save"), for: .normal)
-        self.doneBtn.addTarget(self, action: #selector(doneBtnClick), for: .touchUpInside)
-        self.doneBtn.adjustsImageWhenHighlighted = false
-        self.doneBtn.zl_enlargeValidTouchArea(inset: 30)
-        self.topShadowView.addSubview(self.doneBtn)
         
         let drawColorLayout = UICollectionViewFlowLayout()
         drawColorLayout.itemSize = CGSize(width: 30, height: 30)
