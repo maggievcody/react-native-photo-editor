@@ -414,8 +414,7 @@ class ZLTextStickerView: UIView, ZLStickerViewAdditional {
     
     class func calculateSize(text: String, width: CGFloat) -> CGSize {
         let diff = ZLTextStickerView.edgeInset * 2
-        // TODO: Use Poppins
-        let size = text.boundingRect(font: UIFont.boldSystemFont(ofSize: ZLTextStickerView.fontSize + 5), limitSize: CGSize(width: width - diff, height: CGFloat.greatestFiniteMagnitude))
+        let size = text.boundingRect(font: UIFont(name: "Poppins-Semibold", size: ZLTextStickerView.fontSize), limitSize: CGSize(width: width - diff, height: CGFloat.greatestFiniteMagnitude))
         return CGSize(width: size.width + diff * 2, height: size.height + diff * 2)
     }
     
