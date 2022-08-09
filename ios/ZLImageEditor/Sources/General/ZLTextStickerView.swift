@@ -136,7 +136,7 @@ class ZLTextStickerView: UIView, ZLStickerViewAdditional {
         self.label.textColor = textColor
         self.label.backgroundColor = bgColor
         self.label.numberOfLines = 0
-        self.label.lineBreakMode = .byCharWrapping
+        self.label.lineBreakMode = .byWordWrapping
         self.borderView.addSubview(self.label)
         
         self.tapGes = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
