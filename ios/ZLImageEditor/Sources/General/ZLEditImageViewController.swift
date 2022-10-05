@@ -639,6 +639,11 @@ public class ZLEditImageViewController: UIViewController {
         ZLImageEditorConfiguration.default().imageStickerContainerView?.show(in: self.view)
         self.setToolView(show: false)
         self.imageStickerContainerIsHidden = false
+
+        // Hide draw tool while in stick mode
+        self.selectedTool = nil
+        self.drawColorCollectionView.isHidden = true
+        self.revokeBtn.isHidden = true
     }
     
     func textStickerBtnClick() {
